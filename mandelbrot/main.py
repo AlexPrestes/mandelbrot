@@ -27,7 +27,7 @@ class Fractal:
         self.max_iter = -int(np.log10(self.size_pixel)*self.max_iter_factor)
         self.paused_zoom = True
         self.cmap = ti.Vector.field(3, ti.f64, shape=(256,))
-        self.cmap.from_numpy(colormaps['nipy_spectral'](np.linspace(0, 1, 256))[:, :3])
+        self.cmap.from_numpy(colormaps['prism'](np.linspace(0, 1, 256))[:, :3])
     
     def events(self):
         if self.window.get_event( ti.ui.PRESS ):
@@ -100,8 +100,8 @@ class Fractal:
             self.frame[x, y] = self.calc_z(x, y, size_pixel, offset, max_iter)
     
     def run(self):
-        self.offset = ti.Vector([-0.72140601, 0.25917349])
         while self.window.running:
+            #self.offset = ti.Vector([-0.77568377, 0.13646737])
             self.events()
             if not self.paused_zoom:
                 self.adjust_zoom(2)
