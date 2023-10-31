@@ -7,8 +7,11 @@ O conjunto de mandelbrot é um fractal no plano complexo, onde conforme um deter
 # Controles da interface
 
 R ou r: reinicia;
+
 Barra de Espaço ou Botão Direito do Mouse: Pausa a simulação;
+
 Botão Esquerdo do Mouse: Centraliza o zoom na posição do clique;
+
 Botão do Meio do Mouse: Printa a posição do centro.
 
 
